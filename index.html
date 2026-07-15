@@ -3,24 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Advanced Eyecare Ghana — Eye Exams, Glasses &amp; Contact Lenses, Ablekuma Accra</title>
+<title data-cfg="pageTitle">ClearVue Optical & Eye Care — Comprehensive Eye Exams, Osu Accra</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
+/* ================================================================
+   EASY RESKIN NOTE: All brand colors live in :root below.
+   Swap --teal / --teal-bright / --violet to re-theme instantly.
+   ================================================================ */
 :root{
-  --ink:#0E1116;
-  --ink-soft:#5B6670;
-  --ink-dim:#94A0A8;
-  --paper:#F6F5F1;
+  --ink:#282F2C;           /* soft charcoal, not harsh black */
+  --ink-soft:#69746E;
+  --ink-dim:#9CA69F;
+  --paper:#F7F6F2;         /* warm neutral off-white */
   --white:#FFFFFF;
-  --mist:#EAF1FB;
-  --teal:#123C73;
-  --teal-bright:#2F7DE1;
-  --violet:#E8A33D;
-  --teal-glow:rgba(47,125,225,0.18);
-  --violet-glow:rgba(232,163,61,0.16);
-  --line:rgba(14,20,22,0.08);
+  --mist:#EEF0EC;
+
+  --teal:#5F796D;          /* muted sage — calm, clinical, low-saturation */
+  --teal-bright:#8CA396;   /* soft sage-grey accent, gentle on the eye */
+  --violet:#A89A8C;        /* warm taupe for secondary contrast */
+  --teal-glow:rgba(140,163,150,0.16);
+  --violet-glow:rgba(168,154,140,0.13);
+
+  --line:rgba(40,47,44,0.08);
   --glass:rgba(255,255,255,0.55);
   --font-d:'Bricolage Grotesque',sans-serif;
   --font-b:'Inter',sans-serif;
@@ -35,31 +41,30 @@ img{max-width:100%;display:block}
 ::-webkit-scrollbar-track{background:var(--mist)}
 ::-webkit-scrollbar-thumb{background:var(--teal-bright);border-radius:3px}
 
-/* grain texture overlay */
 body::after{
   content:'';position:fixed;inset:0;z-index:999;pointer-events:none;opacity:.025;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
 /* ===== TOPBAR ===== */
-.topbar{background:var(--ink);color:rgba(246,245,242,0.6);font-size:12px;padding:9px 6vw}
+.topbar{background:var(--ink);color:rgba(244,247,248,0.6);font-size:12px;padding:9px 6vw}
 .topbar-inner{max-width:1360px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
 .topbar-left{display:flex;gap:26px;flex-wrap:wrap}
 .topbar-item{display:flex;align-items:center;gap:7px}
 .topbar-item svg{width:12px;height:12px;stroke:var(--teal-bright);stroke-width:2;fill:none;flex-shrink:0}
 .topbar-right{display:flex;align-items:center;gap:16px}
 .topbar-social{display:flex;gap:8px}
-.topbar-social a{width:23px;height:23px;border-radius:50%;background:rgba(246,245,242,0.08);display:flex;align-items:center;justify-content:center;transition:background .2s}
+.topbar-social a{width:23px;height:23px;border-radius:50%;background:rgba(244,247,248,0.08);display:flex;align-items:center;justify-content:center;transition:background .2s}
 .topbar-social a:hover{background:var(--teal-bright)}
-.topbar-social svg{width:10px;height:10px;stroke:rgba(246,245,242,0.85);fill:none;stroke-width:1.8}
+.topbar-social svg{width:10px;height:10px;stroke:rgba(244,247,248,0.85);fill:none;stroke-width:1.8}
 
-/* ===== HEADER — glass ===== */
+/* ===== HEADER — glass pill ===== */
 header{position:sticky;top:0;z-index:100;padding:20px 6vw 0}
-.header-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:12px 22px;border-radius:100px;background:rgba(255,255,255,0.55);backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4);border:1px solid rgba(255,255,255,0.5);box-shadow:0 8px 32px rgba(14,20,22,0.05);transition:box-shadow .3s}
-header.scrolled .header-inner{box-shadow:0 16px 50px rgba(14,20,22,0.1)}
+.header-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:12px 22px;border-radius:100px;background:rgba(255,255,255,0.55);backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4);border:1px solid rgba(255,255,255,0.5);box-shadow:0 8px 32px rgba(14,22,32,0.05);transition:box-shadow .3s}
+header.scrolled .header-inner{box-shadow:0 16px 50px rgba(14,22,32,0.1)}
 .logo{display:flex;align-items:center;gap:11px}
 .logo-mark{width:38px;height:38px;border-radius:50%;background:var(--ink);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.logo-mark svg{width:19px;height:19px;stroke:var(--teal-bright);fill:none;stroke-width:1.6}
+.logo-mark svg{width:17px;height:17px;stroke:var(--teal-bright);fill:none;stroke-width:1.6}
 .logo-text strong{display:block;font-family:var(--font-d);font-size:16px;font-weight:700;color:var(--ink);letter-spacing:-.01em}
 .logo-text span{display:block;font-size:9px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--teal)}
 nav.mainnav ul{list-style:none;display:flex;gap:32px}
@@ -77,15 +82,15 @@ nav.mainnav a:hover::after{width:100%}
 .mesh div{position:absolute;border-radius:50%;filter:blur(90px)}
 .mesh .m1{width:520px;height:520px;background:var(--teal-glow);top:-140px;right:-60px}
 .mesh .m2{width:420px;height:420px;background:var(--violet-glow);top:120px;left:-120px}
-.mesh .m3{width:340px;height:340px;background:rgba(47,125,225,0.1);bottom:-100px;right:26%}
+.mesh .m3{width:340px;height:340px;background:rgba(43,196,214,0.1);bottom:-100px;right:26%}
 
 .hero-inner{position:relative;z-index:1;max-width:1200px;margin:0 auto;text-align:center;padding-bottom:56px}
 .hero-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);margin-bottom:30px;background:var(--white);padding:8px 18px;border-radius:100px;border:1px solid var(--line)}
 .hero-eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--teal-bright);animation:pulse 2.2s ease-in-out infinite}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.3;transform:scale(.6)}}
-.hero-inner h1{font-size:clamp(48px,9vw,120px);letter-spacing:-.045em;margin-bottom:28px;font-weight:800}
+.hero-inner h1{font-size:clamp(48px,9vw,128px);letter-spacing:-.045em;margin-bottom:28px;font-weight:800}
 .hero-inner h1 .accent{color:var(--teal-bright);font-style:italic;font-weight:500}
-.hero-inner p.lead{font-size:18px;font-weight:400;color:var(--ink-soft);max-width:540px;margin:0 auto 42px}
+.hero-inner p.lead{font-size:18px;font-weight:400;color:var(--ink-soft);max-width:520px;margin:0 auto 42px}
 .hero-actions{display:flex;align-items:center;justify-content:center;gap:22px;flex-wrap:wrap;margin-bottom:60px}
 .btn-primary{background:var(--ink);color:#fff;padding:17px 32px;border-radius:100px;font-weight:600;font-size:14.5px;display:inline-flex;align-items:center;gap:10px;transition:background .25s,transform .2s}
 .btn-primary:hover{background:var(--teal);transform:translateY(-2px)}
@@ -94,13 +99,12 @@ nav.mainnav a:hover::after{width:100%}
 .btn-text:hover{color:var(--teal)}
 .btn-text svg{width:14px;height:14px;stroke:currentColor;stroke-width:2;fill:none}
 
-/* hero visual — glass floating panel over photo */
-.hero-visual{position:relative;max-width:1100px;margin:0 auto;border-radius:36px;overflow:hidden;box-shadow:0 50px 100px rgba(14,20,22,0.18)}
+.hero-visual{position:relative;max-width:1100px;margin:0 auto;border-radius:36px;overflow:hidden;box-shadow:0 50px 100px rgba(14,22,32,0.18)}
 .hero-visual img{width:100%;height:560px;object-fit:cover}
-.hero-visual::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,20,22,0) 40%,rgba(14,20,22,0.55) 100%)}
+.hero-visual::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,22,32,0) 40%,rgba(14,22,32,0.55) 100%)}
 .hv-glass{position:absolute;left:28px;bottom:28px;right:28px;display:flex;justify-content:space-between;align-items:flex-end;gap:20px;z-index:2}
 .hv-card{background:rgba(255,255,255,0.16);backdrop-filter:blur(16px) saturate(1.5);-webkit-backdrop-filter:blur(16px) saturate(1.5);border:1px solid rgba(255,255,255,0.25);border-radius:20px;padding:18px 22px;display:flex;align-items:center;gap:13px}
-.hv-ic{width:38px;height:38px;border-radius:50%;background:rgba(47,125,225,0.28);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.hv-ic{width:38px;height:38px;border-radius:50%;background:rgba(43,196,214,0.25);display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .hv-ic svg{width:18px;height:18px;stroke:var(--teal-bright);stroke-width:2;fill:none}
 .hv-card b{display:block;font-family:var(--font-d);font-size:14px;color:#fff;font-weight:700}
 .hv-card span{font-size:11px;color:rgba(255,255,255,0.75)}
@@ -130,11 +134,11 @@ section{padding:130px 6vw}
 .about{background:var(--white)}
 .about-inner{display:grid;grid-template-columns:.95fr 1.05fr;gap:80px;align-items:center;max-width:1200px;margin:0 auto}
 .about-visual{position:relative;height:520px}
-.about-photo-a{position:absolute;left:0;top:60px;width:64%;height:70%;border-radius:28px;overflow:hidden;box-shadow:0 30px 70px rgba(14,20,22,0.14);z-index:2}
+.about-photo-a{position:absolute;left:0;top:60px;width:64%;height:70%;border-radius:28px;overflow:hidden;box-shadow:0 30px 70px rgba(14,22,32,0.14);z-index:2}
 .about-photo-a img{width:100%;height:100%;object-fit:cover}
-.about-photo-b{position:absolute;right:0;top:0;width:46%;height:48%;border-radius:24px;overflow:hidden;box-shadow:0 24px 60px rgba(14,20,22,0.14);z-index:1;border:6px solid var(--white)}
+.about-photo-b{position:absolute;right:0;top:0;width:46%;height:48%;border-radius:24px;overflow:hidden;box-shadow:0 24px 60px rgba(14,22,32,0.14);z-index:1;border:6px solid var(--white)}
 .about-photo-b img{width:100%;height:100%;object-fit:cover}
-.about-chip{position:absolute;right:6%;bottom:0;background:var(--ink);color:#fff;border-radius:22px;padding:24px 26px;max-width:220px;box-shadow:0 24px 50px rgba(14,20,22,0.22);z-index:3}
+.about-chip{position:absolute;right:6%;bottom:0;background:var(--ink);color:#fff;border-radius:22px;padding:24px 26px;max-width:210px;box-shadow:0 24px 50px rgba(14,22,32,0.22);z-index:3}
 .about-chip b{display:block;font-family:var(--font-d);font-size:15px;margin-bottom:6px}
 .about-chip span{font-size:12px;color:rgba(255,255,255,0.65);line-height:1.7;font-weight:400}
 .about-list{margin-top:36px;display:flex;flex-direction:column}
@@ -150,15 +154,15 @@ section{padding:130px 6vw}
 .services-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:56px;flex-wrap:wrap}
 .bento{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:190px;gap:18px}
 .svc{background:var(--white);border-radius:26px;padding:32px;position:relative;transition:transform .35s cubic-bezier(.22,.61,.36,1),box-shadow .35s;border:1px solid var(--line);display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
-.svc:hover{transform:translateY(-6px);box-shadow:0 28px 60px rgba(14,20,22,0.08)}
+.svc:hover{transform:translateY(-6px);box-shadow:0 28px 60px rgba(14,22,32,0.08)}
 .svc.b-lg{grid-column:span 2;grid-row:span 2}
 .svc.b-md{grid-column:span 2;grid-row:span 1}
 .svc.b-sm{grid-column:span 1;grid-row:span 1}
 .svc.featured{background:var(--ink);border-color:transparent}
 .svc.featured .svc-title,.svc.featured p{color:#fff}
 .svc.featured p{color:rgba(255,255,255,0.6)}
-.svc.featured .svc-icon-bg{background:rgba(47,125,225,0.22)}
-.svc.featured .svc-tag{background:rgba(47,125,225,0.22);color:var(--teal-bright)}
+.svc.featured .svc-icon-bg{background:rgba(43,196,214,0.18)}
+.svc.featured .svc-tag{background:rgba(43,196,214,0.18);color:var(--teal-bright)}
 .svc-icon-bg{width:44px;height:44px;border-radius:50%;background:var(--teal-glow);display:flex;align-items:center;justify-content:center}
 .svc.b-lg .svc-icon-bg{width:56px;height:56px}
 .svc-icon-bg svg{width:20px;height:20px;stroke:var(--teal);stroke-width:1.6;fill:none}
@@ -178,15 +182,19 @@ section{padding:130px 6vw}
 .proc h4{font-size:17px;margin-bottom:10px;font-weight:700}
 .proc p{font-size:13.5px;font-weight:400;color:var(--ink-soft)}
 
-/* ===== CARE FOCUS ===== */
+/* ===== RESULTS ===== */
 .results{background:var(--ink);color:#fff}
 .results-head{text-align:center;max-width:600px;margin:0 auto 64px}
 .results-head .eyebrow{justify-content:center}
 .results-head h2{color:#fff}
 .ba-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.ba-card{background:rgba(255,255,255,0.04);border-radius:26px;overflow:hidden;border:1px solid rgba(47,125,225,0.18)}
-.ba-imgs{position:relative;aspect-ratio:4/3}
+.ba-card{background:rgba(255,255,255,0.04);border-radius:26px;overflow:hidden;border:1px solid rgba(43,196,214,0.14)}
+.ba-imgs{position:relative;display:grid;grid-template-columns:1fr 1fr;aspect-ratio:4/3}
 .ba-imgs img{width:100%;height:100%;object-fit:cover}
+.ba-div{position:absolute;left:50%;top:0;bottom:0;width:2px;background:var(--teal-bright);transform:translateX(-50%);display:flex;align-items:center;justify-content:center}
+.ba-div-ic{width:26px;height:26px;border-radius:50%;background:var(--teal-bright);color:var(--ink);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700}
+.ba-lbl{position:absolute;bottom:10px;font-size:9px;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,0.85);background:rgba(14,22,32,0.55);padding:4px 10px;border-radius:100px;backdrop-filter:blur(6px)}
+.ba-lbl.l{left:10px}.ba-lbl.r{right:10px}
 .ba-meta{padding:18px 20px}
 .ba-meta h4{color:#fff;font-size:15px;margin-bottom:4px;font-weight:700}
 .ba-meta p{font-size:12px;font-weight:400;color:rgba(255,255,255,0.5)}
@@ -194,9 +202,9 @@ section{padding:130px 6vw}
 /* ===== CONTACT ===== */
 .contact{background:var(--paper)}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}
-.map-wrap{border-radius:28px;overflow:hidden;height:400px;position:relative;box-shadow:0 24px 60px rgba(14,20,22,0.1)}
+.map-wrap{border-radius:28px;overflow:hidden;height:400px;position:relative;box-shadow:0 24px 60px rgba(14,22,32,0.1)}
 .map-wrap iframe{width:100%;height:100%;border:0}
-.map-chip{position:absolute;top:18px;left:18px;background:rgba(14,20,22,0.85);backdrop-filter:blur(8px);color:#fff;padding:9px 16px;border-radius:100px;font-size:12px;font-weight:500;display:flex;align-items:center;gap:8px}
+.map-chip{position:absolute;top:18px;left:18px;background:rgba(14,22,32,0.85);backdrop-filter:blur(8px);color:#fff;padding:9px 16px;border-radius:100px;font-size:12px;font-weight:500;display:flex;align-items:center;gap:8px}
 .map-chip svg{width:13px;height:13px;stroke:var(--teal-bright);stroke-width:2;fill:none}
 .info-list{display:flex;flex-direction:column}
 .info-row{display:flex;gap:18px;padding:20px 0;border-bottom:1px solid var(--line)}
@@ -213,8 +221,7 @@ section{padding:130px 6vw}
 .hrow:last-child{border-bottom:none}
 .hday{color:rgba(255,255,255,0.55);font-weight:400}
 .htime{color:var(--teal-bright);font-weight:600}
-.hnote{font-size:11px;color:rgba(255,255,255,0.35);margin-top:14px;line-height:1.6}
-.form-card{background:#fff;border-radius:28px;padding:38px;margin-top:38px;box-shadow:0 24px 60px rgba(14,20,22,0.06);border:1px solid var(--line)}
+.form-card{background:#fff;border-radius:28px;padding:38px;margin-top:38px;box-shadow:0 24px 60px rgba(14,22,32,0.06);border:1px solid var(--line)}
 .form-card h4{font-size:19px;margin-bottom:6px;font-weight:700}
 .form-card p{font-size:13px;color:var(--ink-dim);margin-bottom:24px;font-weight:400}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
@@ -235,25 +242,25 @@ textarea.form-field{grid-column:1/-1;resize:vertical;min-height:100px}
 .cta .eyebrow{justify-content:center;color:var(--teal-bright)}
 .cta h2{color:#fff;font-size:clamp(32px,4.6vw,52px);margin-bottom:20px}
 .cta p{color:rgba(255,255,255,0.7);font-weight:400;margin-bottom:36px;font-size:16px}
-.cta .btn-primary{background:var(--teal-bright);color:#fff}
-.cta .btn-primary:hover{background:#fff;color:var(--ink)}
+.cta .btn-primary{background:var(--teal-bright);color:var(--ink)}
+.cta .btn-primary:hover{background:#fff}
 
 /* ===== FOOTER ===== */
-footer{background:var(--ink);color:rgba(246,245,242,0.6);padding-top:70px}
+footer{background:var(--ink);color:rgba(244,247,248,0.6);padding-top:70px}
 .footer-grid{max-width:1200px;margin:0 auto;padding:0 6vw 44px;display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:44px}
 .footer-brand-block .logo-text strong{color:#fff}
-.footer-brand-block .logo-mark{background:rgba(246,245,242,0.1)}
-.footer-brand-block p{font-size:13px;font-weight:400;margin-top:16px;line-height:1.85;max-width:260px;color:rgba(246,245,242,0.42)}
+.footer-brand-block .logo-mark{background:rgba(244,247,248,0.1)}
+.footer-brand-block p{font-size:13px;font-weight:400;margin-top:16px;line-height:1.85;max-width:260px;color:rgba(244,247,248,0.42)}
 .footer-col h4{color:#fff;font-size:13.5px;margin-bottom:20px;font-weight:700;letter-spacing:.03em}
 .footer-col ul{list-style:none}
 .footer-col li{margin-bottom:12px;font-size:13.5px}
-.footer-col a{color:rgba(246,245,242,0.48);transition:color .2s}
+.footer-col a{color:rgba(244,247,248,0.48);transition:color .2s}
 .footer-col a:hover{color:var(--teal-bright)}
 .footer-social{display:flex;gap:10px;margin-top:18px}
-.footer-social a{width:34px;height:34px;border-radius:50%;background:rgba(246,245,242,0.06);display:flex;align-items:center;justify-content:center;transition:background .2s}
+.footer-social a{width:34px;height:34px;border-radius:50%;background:rgba(244,247,248,0.06);display:flex;align-items:center;justify-content:center;transition:background .2s}
 .footer-social a:hover{background:var(--teal)}
 .footer-social svg{width:14px;height:14px;stroke:var(--teal-bright);stroke-width:1.8;fill:none}
-.bottom-bar{border-top:1px solid rgba(246,245,242,0.08);padding:22px 6vw;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;max-width:1200px;margin:0 auto;font-size:12px;color:rgba(246,245,242,0.32)}
+.bottom-bar{border-top:1px solid rgba(244,247,248,0.08);padding:22px 6vw;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;max-width:1200px;margin:0 auto;font-size:12px;color:rgba(244,247,248,0.32)}
 
 /* ===== REVEAL ===== */
 .reveal{opacity:0;transform:translateY(32px);transition:opacity .9s cubic-bezier(.16,.84,.24,1),transform .9s cubic-bezier(.16,.84,.24,1)}
@@ -297,35 +304,35 @@ footer{background:var(--ink);color:rgba(246,245,242,0.6);padding-top:70px}
 <div class="topbar">
   <div class="topbar-inner">
     <div class="topbar-left">
-      <div class="topbar-item"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Eduardo Mohdlana Rd, Ablekuma, Accra</span></div>
-      <div class="topbar-item"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.33 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.81a16 16 0 0 0 8.28 8.28l1.63-1.96a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>020 724 2720</span></div>
+      <div class="topbar-item"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span data-cfg="address">56 Orphan Crescent, Osu, Accra</span></div>
+      <div class="topbar-item"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.33 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.81a16 16 0 0 0 8.28 8.28l1.63-1.96a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span data-cfg="phoneDisplay">055 571 6192</span></div>
     </div>
     <div class="topbar-right">
-      <span style="font-weight:400;color:rgba(246,245,242,.4)">Serving Accra since 2000</span>
+      <span style="font-weight:400;color:rgba(244,247,248,.4)">GPS: <span data-cfg="gps">GL-027-7195</span></span>
       <div class="topbar-social">
-        <a href="https://www.instagram.com/advancedeyecareghana/" target="_blank" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
-        <a href="tel:0207242720" aria-label="Call"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.33 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.81a16 16 0 0 0 8.28 8.28l1.63-1.96a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+        <a data-cfg-href="instagramUrl" href="#" target="_blank" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        <a data-cfg-href="telUrl" href="#" aria-label="Call"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.33 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.81a16 16 0 0 0 8.28 8.28l1.63-1.96a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
       </div>
     </div>
   </div>
 </div>
 
-<!-- HEADER — glass pill -->
+<!-- HEADER -->
 <header id="siteHeader">
   <div class="header-inner">
     <a href="#" class="logo">
-      <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M1 12s4.5-7.5 11-7.5S23 12 23 12s-4.5 7.5-11 7.5S1 12 1 12z"/><circle cx="12" cy="12" r="3.2"/></svg></div>
-      <div class="logo-text"><strong>Advanced Eyecare</strong><span>Ghana</span></div>
+      <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3.4"/></svg></div>
+      <div class="logo-text"><strong data-cfg="businessName">ClearVue</strong><span data-cfg="tagline">Optical &amp; Eye Care</span></div>
     </a>
     <nav class="mainnav">
       <ul>
         <li><a href="#services">Services</a></li>
         <li><a href="#about">Why Us</a></li>
-        <li><a href="#results">Our Care</a></li>
+        <li><a href="#results">Results</a></li>
         <li><a href="#contact">Visit Us</a></li>
       </ul>
     </nav>
-    <a href="https://wa.me/233207242720" class="book-btn" target="_blank">Book Eye Exam</a>
+    <a data-cfg-href="whatsappUrl" href="#" class="book-btn" target="_blank">Book Eye Exam</a>
     <div class="burger"><span></span><span></span><span></span></div>
   </div>
 </header>
@@ -334,27 +341,27 @@ footer{background:var(--ink);color:rgba(246,245,242,0.6);padding-top:70px}
 <section class="hero">
   <div class="mesh"><div class="m1"></div><div class="m2"></div><div class="m3"></div></div>
   <div class="hero-inner">
-    <div class="hero-eyebrow reveal"><div class="dot"></div>Ablekuma, Accra</div>
-    <h1 class="reveal">Clear vision,<br><span class="accent">expertly delivered.</span></h1>
-    <p class="lead reveal">Comprehensive eye exams, prescription eyewear, and advanced diagnostic care — trusted across Accra since 2000.</p>
+    <div class="hero-eyebrow reveal"><div class="dot"></div><span data-cfg="location">Osu, Accra</span></div>
+    <h1 class="reveal">See life,<br><span class="accent">in perfect focus.</span></h1>
+    <p class="lead reveal">Comprehensive eye exams, prescription eyewear, and advanced vision care — delivered by a team trusted by thousands across Accra.</p>
     <div class="hero-actions reveal">
-      <a href="https://wa.me/233207242720" class="btn-primary" target="_blank">
-        Book a Consultation
+      <a data-cfg-href="whatsappUrl" href="#" class="btn-primary" target="_blank">
+        Book an Eye Exam
         <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </a>
       <a href="#services" class="btn-text">See our services<svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a>
     </div>
   </div>
   <div class="hero-visual reveal">
-    <img src="https://images.pexels.com/photos/5752284/pexels-photo-5752284.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Optometrist performing a precision eye exam at Advanced Eyecare Ghana">
+    <img src="https://images.pexels.com/photos/5752242/pexels-photo-5752242.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Optometrist examining patient's eyes">
     <div class="hv-glass">
       <div class="hv-card">
-        <div class="hv-ic"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
-        <div><b>Precision Diagnostics</b><span>Modern equipment, accurate prescriptions</span></div>
+        <div class="hv-ic"><svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3.4"/></svg></div>
+        <div><b>Same-Day Glasses</b><span>Most prescriptions ready today</span></div>
       </div>
       <div class="hv-stats">
-        <div class="hv-stat"><b>2000</b><span>Est. In Accra</span></div>
-        <div class="hv-stat"><b>20+</b><span>Years Experience</span></div>
+        <div class="hv-stat"><b>18K+</b><span>Patients</span></div>
+        <div class="hv-stat"><b>2,400+</b><span>Frames</span></div>
       </div>
     </div>
   </div>
@@ -364,16 +371,16 @@ footer{background:var(--ink);color:rgba(246,245,242,0.6);padding-top:70px}
 <div class="marquee">
   <div class="marquee-track">
     <span class="marquee-item"><span class="sep"></span>Comprehensive Eye Exams</span>
-    <span class="marquee-item"><span class="sep"></span>Prescription Glasses &amp; Frames</span>
-    <span class="marquee-item"><span class="sep"></span>Contact Lens Fittings</span>
-    <span class="marquee-item"><span class="sep"></span>Glaucoma &amp; Cataract Care</span>
-    <span class="marquee-item"><span class="sep"></span>Refractive Error Correction</span>
+    <span class="marquee-item"><span class="sep"></span>Prescription Eyeglasses</span>
+    <span class="marquee-item"><span class="sep"></span>Contact Lens Fitting</span>
+    <span class="marquee-item"><span class="sep"></span>Cataract Screening</span>
+    <span class="marquee-item"><span class="sep"></span>Glaucoma Testing</span>
     <span class="marquee-item"><span class="sep"></span>Pediatric Eye Care</span>
     <span class="marquee-item"><span class="sep"></span>Comprehensive Eye Exams</span>
-    <span class="marquee-item"><span class="sep"></span>Prescription Glasses &amp; Frames</span>
-    <span class="marquee-item"><span class="sep"></span>Contact Lens Fittings</span>
-    <span class="marquee-item"><span class="sep"></span>Glaucoma &amp; Cataract Care</span>
-    <span class="marquee-item"><span class="sep"></span>Refractive Error Correction</span>
+    <span class="marquee-item"><span class="sep"></span>Prescription Eyeglasses</span>
+    <span class="marquee-item"><span class="sep"></span>Contact Lens Fitting</span>
+    <span class="marquee-item"><span class="sep"></span>Cataract Screening</span>
+    <span class="marquee-item"><span class="sep"></span>Glaucoma Testing</span>
     <span class="marquee-item"><span class="sep"></span>Pediatric Eye Care</span>
   </div>
 </div>
@@ -383,32 +390,32 @@ footer{background:var(--ink);color:rgba(246,245,242,0.6);padding-top:70px}
   <div class="about-inner">
     <div class="about-visual reveal">
       <div class="about-photo-a">
-        <img src="https://images.pexels.com/photos/34093127/pexels-photo-34093127/free-photo-of-modern-optometry-office-with-equipment.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Modern optometry equipment at Advanced Eyecare Ghana">
+        <img src="https://images.pexels.com/photos/5752266/pexels-photo-5752266.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Patient trying on eyeglasses frames">
       </div>
       <div class="about-photo-b">
-        <img src="https://images.pexels.com/photos/5766564/pexels-photo-5766564.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Frame selection on display at the clinic">
+        <img src="https://images.pexels.com/photos/1054777/pexels-photo-1054777.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Modern optical clinic interior">
       </div>
       <div class="about-chip">
-        <b>State-of-the-art equipment</b>
-        <span>Precision imaging for accurate prescriptions.</span>
+        <b>Same-day glasses</b>
+        <span>Most prescriptions ready the same day you visit.</span>
       </div>
     </div>
     <div class="reveal">
-      <div class="eyebrow">Why Advanced Eyecare</div>
-      <h2 class="section-title">Precision care,<br>built <span class="accent">around your eyes</span></h2>
-      <p class="section-sub">We combine advanced diagnostic technology with a genuinely patient-first approach — every exam and every pair of glasses is shaped around your vision, your comfort, and your goals.</p>
+      <div class="eyebrow">Why <span data-cfg="businessName3">ClearVue</span></div>
+      <h2 class="section-title">Clear vision,<br>built <span class="accent">around you</span></h2>
+      <p class="section-sub">We combine modern diagnostic technology with a genuinely patient-first approach — every eye exam and every pair of glasses is shaped around your vision, comfort, and lifestyle.</p>
       <div class="about-list">
         <div class="about-row">
-          <div class="about-ic"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-          <div><h4>Advanced diagnostic technology</h4><p>Modern equipment for precise, accurate eye examinations — not guesswork.</p></div>
+          <div class="about-ic"><svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3.4"/></svg></div>
+          <div><h4>Licensed optometrists</h4><p>Trained specifically in comprehensive eye diagnostics — not a generic add-on service.</p></div>
         </div>
         <div class="about-row">
           <div class="about-ic"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div>
-          <div><h4>20+ years serving Accra</h4><p>Established in 2000, with a track record of trusted eye care in the community.</p></div>
+          <div><h4>A calm, modern clinic</h4><p>Purpose-built space designed to feel nothing like a typical hospital eye ward.</p></div>
         </div>
         <div class="about-row">
           <div class="about-ic"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div>
-          <div><h4>Honest, patient-first care</h4><p>No upselling, no unnecessary procedures — just what your eyes actually need.</p></div>
+          <div><h4>Transparent, honest care</h4><p>No upselling, no unnecessary procedures — just what your eyes actually need.</p></div>
         </div>
       </div>
     </div>
@@ -421,38 +428,38 @@ footer{background:var(--ink);color:rgba(246,245,242,0.6);padding-top:70px}
     <div class="services-head reveal">
       <div>
         <div class="eyebrow">Treatments</div>
-        <h2 class="section-title">Comprehensive care,<br>engineered for <span class="accent">your vision</span></h2>
+        <h2 class="section-title">Complete eye care,<br>engineered for <span class="accent">your vision</span></h2>
       </div>
-      <a href="https://wa.me/233207242720" class="btn-primary" target="_blank">Ask About a Service</a>
+      <a data-cfg-href="whatsappUrl" href="#" class="btn-primary" target="_blank">Ask About a Service</a>
     </div>
     <div class="bento">
       <div class="svc b-lg featured reveal">
-        <div class="svc-icon-bg"><svg viewBox="0 0 24 24"><path d="M1 12s4.5-7.5 11-7.5S23 12 23 12s-4.5 7.5-11 7.5S1 12 1 12z"/><circle cx="12" cy="12" r="3.2"/></svg></div>
+        <div class="svc-icon-bg"><svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3.4"/></svg></div>
         <div>
           <div class="svc-title">Comprehensive Eye Exams</div>
-          <p>Our core service — a thorough assessment of your vision and eye health using advanced diagnostic technology, so nothing gets missed and every prescription is precise.</p>
+          <p>Our signature service — full diagnostic eye exams that catch vision problems and eye disease early, with clear results explained on the spot.</p>
           <span class="svc-tag">Most Requested</span>
         </div>
       </div>
       <div class="svc b-sm reveal">
-        <div class="svc-icon-bg"><svg viewBox="0 0 24 24"><circle cx="6" cy="13" r="3.5"/><circle cx="18" cy="13" r="3.5"/><path d="M9.5 13h5M2.5 11l1-2M21.5 11l-1-2"/></svg></div>
-        <div><div class="svc-title">Prescription Glasses</div><p>Quality frames and lenses, fitted to you.</p></div>
+        <div class="svc-icon-bg"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="8" height="8" rx="2"/><rect x="14" y="7" width="8" height="8" rx="2"/><line x1="10" y1="11" x2="14" y2="11"/></svg></div>
+        <div><div class="svc-title">Eyeglasses</div><p>Hundreds of frame styles.</p></div>
       </div>
       <div class="svc b-sm reveal">
-        <div class="svc-icon-bg"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg></div>
-        <div><div class="svc-title">Contact Lenses</div><p>Fittings for daily and extended wear.</p></div>
+        <div class="svc-icon-bg"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2.4"/></svg></div>
+        <div><div class="svc-title">Contact Lenses</div><p>Custom-fitted, comfortable.</p></div>
       </div>
       <div class="svc b-md reveal">
-        <div class="svc-icon-bg"><svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6z"/></svg></div>
-        <div><div class="svc-title">Glaucoma &amp; Cataract Management</div><p>Ongoing monitoring and care for long-term eye health conditions.</p></div>
+        <div class="svc-icon-bg"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
+        <div><div class="svc-title">Cataract Screening</div><p>Early detection and referral pathways that protect your long-term vision.</p></div>
       </div>
       <div class="svc b-md reveal">
-        <div class="svc-icon-bg"><svg viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/><circle cx="12" cy="12" r="5"/></svg></div>
-        <div><div class="svc-title">Refractive Error Correction</div><p>Myopia, hyperopia and astigmatism, corrected precisely.</p></div>
+        <div class="svc-icon-bg"><svg viewBox="0 0 24 24"><path d="M12 2v4"/><path d="M12 18v4"/><path d="M4.9 4.9l2.8 2.8"/><path d="M16.3 16.3l2.8 2.8"/><path d="M2 12h4"/><path d="M18 12h4"/><path d="M4.9 19.1l2.8-2.8"/><path d="M16.3 7.7l2.8-2.8"/></svg></div>
+        <div><div class="svc-title">Glaucoma Testing</div><p>Precision eye-pressure and optic nerve testing performed with care.</p></div>
       </div>
       <div class="svc b-sm reveal">
-        <div class="svc-icon-bg"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></div>
-        <div><div class="svc-title">Pediatric Eye Care</div><p>Gentle, patient exams for children.</p></div>
+        <div class="svc-icon-bg"><svg viewBox="0 0 24 24"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></div>
+        <div><div class="svc-title">Pediatric Care</div><p>Gentle vision screening for kids.</p></div>
       </div>
     </div>
   </div>
@@ -463,53 +470,65 @@ footer{background:var(--ink);color:rgba(246,245,242,0.6);padding-top:70px}
   <div class="section-inner">
     <div class="process-head reveal">
       <div class="eyebrow">How It Works</div>
-      <h2 class="section-title">Three steps to <span class="accent">clearer vision</span></h2>
+      <h2 class="section-title">Three steps to <span class="accent">clearer sight</span></h2>
     </div>
     <div class="process-grid">
       <div class="proc reveal">
         <div class="proc-num">01</div>
-        <h4>Consultation &amp; Vision History</h4>
-        <p>We discuss your vision concerns, lifestyle, and eye health history so your exam is tailored to you from the start.</p>
+        <h4>Consultation &amp; Vision Test</h4>
+        <p>We assess your vision, discuss your goals, and run a full diagnostic exam to understand your eyes.</p>
       </div>
       <div class="proc reveal">
         <div class="proc-num">02</div>
-        <h4>Comprehensive Eye Exam</h4>
-        <p>A full diagnostic assessment of your vision and eye health, using modern equipment for an accurate picture.</p>
+        <h4>Fitting &amp; Prescription</h4>
+        <p>Our optometrist recommends the right lenses, frames, or contacts tailored to your prescription.</p>
       </div>
       <div class="proc reveal">
         <div class="proc-num">03</div>
-        <h4>Prescription &amp; Eyewear Fitting</h4>
-        <p>We walk you through your results and help you choose glasses or contacts that fit your prescription and your style.</p>
+        <h4>Collection &amp; Follow-Up</h4>
+        <p>We fit your new glasses or lenses on collection, with follow-up checks to keep your vision sharp.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CARE FOCUS -->
+<!-- RESULTS -->
 <section class="results" id="results">
   <div class="section-inner">
     <div class="results-head reveal">
-      <div class="eyebrow">Our Care</div>
-      <h2 class="section-title">Focused on every part of your eye health</h2>
+      <div class="eyebrow">Patient Stories</div>
+      <h2 class="section-title">See the difference clear vision makes</h2>
     </div>
     <div class="ba-grid">
       <div class="ba-card reveal">
         <div class="ba-imgs">
-          <img src="https://images.pexels.com/photos/6749697/pexels-photo-6749697.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Optometrist conducting a comprehensive eye examination">
+          <img src="https://images.pexels.com/photos/701878/pexels-photo-701878.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Eye exam in progress">
+          <img src="https://images.pexels.com/photos/5752281/pexels-photo-5752281.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Patient happy with new glasses">
+          <div class="ba-div"><div class="ba-div-ic">&#8594;</div></div>
+          <span class="ba-lbl l">Exam</span>
+          <span class="ba-lbl r">New Glasses</span>
         </div>
-        <div class="ba-meta"><h4>Comprehensive Eye Exams</h4><p>Precise diagnostics, every visit</p></div>
+        <div class="ba-meta"><h4>Comprehensive Exam</h4><p>Full diagnostic in a single visit</p></div>
       </div>
       <div class="ba-card reveal">
         <div class="ba-imgs">
-          <img src="https://images.pexels.com/photos/5996745/pexels-photo-5996745.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Prescription eyeglasses and eye chart">
+          <img src="https://images.pexels.com/photos/1054777/pexels-photo-1054777.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Frame selection wall">
+          <img src="https://images.pexels.com/photos/5752296/pexels-photo-5752296.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Patient wearing new eyeglasses">
+          <div class="ba-div"><div class="ba-div-ic">&#8594;</div></div>
+          <span class="ba-lbl l">Choose</span>
+          <span class="ba-lbl r">Wear</span>
         </div>
-        <div class="ba-meta"><h4>Prescription Eyewear</h4><p>Frames and lenses fitted to you</p></div>
+        <div class="ba-meta"><h4>Frame Styling</h4><p>Hundreds of styles to choose from</p></div>
       </div>
       <div class="ba-card reveal">
         <div class="ba-imgs">
-          <img src="https://images.pexels.com/photos/15770389/pexels-photo-15770389/free-photo-of-a-woman-with-a-phoropter.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Specialist checking a patient's eyesight with a phoropter">
+          <img src="https://images.pexels.com/photos/5752247/pexels-photo-5752247.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Contact lens fitting">
+          <img src="https://images.pexels.com/photos/3771069/pexels-photo-3771069.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Patient with clear healthy eyes">
+          <div class="ba-div"><div class="ba-div-ic">&#8594;</div></div>
+          <span class="ba-lbl l">Fitting</span>
+          <span class="ba-lbl r">Confidence</span>
         </div>
-        <div class="ba-meta"><h4>Specialist &amp; Ongoing Care</h4><p>Glaucoma, cataracts &amp; monitoring</p></div>
+        <div class="ba-meta"><h4>Contact Lens Care</h4><p>Comfortable, custom-fitted lenses</p></div>
       </div>
     </div>
   </div>
@@ -519,34 +538,33 @@ footer{background:var(--ink);color:rgba(246,245,242,0.6);padding-top:70px}
 <section class="contact" id="contact">
   <div class="section-inner">
     <div class="eyebrow reveal">Visit Us</div>
-    <h2 class="section-title reveal" style="margin-bottom:48px">Find us in <span class="accent">Ablekuma, Accra</span></h2>
+    <h2 class="section-title reveal" style="margin-bottom:48px">Find us in <span class="accent" data-cfg="locationShort">Osu, Accra</span></h2>
     <div class="contact-grid">
       <div class="reveal">
         <div class="map-wrap">
-          <iframe src="https://www.google.com/maps?q=Eduardo%20Mohdlana%20Rd%2C%20Ablekuma%2C%20Accra%2C%20Ghana&output=embed" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          <div class="map-chip"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Ablekuma, Accra</div>
+          <iframe data-cfg-src="mapEmbedUrl" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.8!2d-0.1710!3d5.5670!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNcKwMzQnMDEuMiJOIDDCsDEwJzE1LjYiVw!5e0!3m2!1sen!2sgh!4v1" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <div class="map-chip"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span data-cfg="locationShort">Osu, Accra</span></div>
         </div>
         <div class="hours-card">
           <h4>Opening Hours</h4>
           <div class="hrow"><span class="hday">Monday – Friday</span><span class="htime">8:00 am – 6:00 pm</span></div>
           <div class="hrow"><span class="hday">Saturday</span><span class="htime">9:00 am – 4:00 pm</span></div>
           <div class="hrow"><span class="hday">Sunday</span><span class="htime" style="color:rgba(255,255,255,.3);font-weight:400">Closed</span></div>
-          <p class="hnote">Please confirm exact hours with the clinic — these can be edited any time.</p>
         </div>
       </div>
       <div class="reveal">
         <div class="info-list">
           <div class="info-row">
             <div class="info-ic"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-            <div><div class="info-label">Address</div><div class="info-val">Eduardo Mohdlana Rd, Ablekuma, Accra, Ghana</div></div>
+            <div><div class="info-label">Address</div><div class="info-val"><span data-cfg="fullAddress">56 Orphan Crescent, Osu, Accra — GPS: GL-027-7195</span></div></div>
           </div>
           <div class="info-row">
             <div class="info-ic"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.33 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.81a16 16 0 0 0 8.28 8.28l1.63-1.96a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
-            <div><div class="info-label">Phone &amp; WhatsApp</div><div class="info-val"><a href="tel:0207242720">020 724 2720</a></div></div>
+            <div><div class="info-label">Phone &amp; WhatsApp</div><div class="info-val"><a data-cfg-href="telUrl" href="#" data-cfg="phoneDisplay">055 571 6192</a></div></div>
           </div>
           <div class="info-row">
             <div class="info-ic"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
-            <div><div class="info-label">Instagram</div><div class="info-val"><a href="https://www.instagram.com/advancedeyecareghana/" target="_blank">@advancedeyecareghana</a></div></div>
+            <div><div class="info-label">Instagram</div><div class="info-val"><a data-cfg-href="instagramUrl" href="#" target="_blank" data-cfg="instagramHandle">@clearvue_optical</a></div></div>
           </div>
         </div>
         <div class="form-card">
@@ -578,9 +596,9 @@ footer{background:var(--ink);color:rgba(246,245,242,0.6);padding-top:70px}
     <div class="cta-mesh"><div class="c1"></div><div class="c2"></div></div>
     <div class="cta-content">
       <div class="eyebrow">Book Today</div>
-      <h2>Ready to see clearly?</h2>
-      <p>Book your eye exam today — WhatsApp us and our team will confirm your slot within the hour.</p>
-      <a href="https://wa.me/233207242720" class="btn-primary" target="_blank">
+      <h2>Ready to see clearly again?</h2>
+      <p>Book your comprehensive eye exam today — WhatsApp us and our team will confirm your slot within the hour.</p>
+      <a data-cfg-href="whatsappUrl" href="#" class="btn-primary" target="_blank">
         Book on WhatsApp
         <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </a>
@@ -593,49 +611,98 @@ footer{background:var(--ink);color:rgba(246,245,242,0.6);padding-top:70px}
   <div class="footer-grid">
     <div class="footer-brand-block">
       <div class="logo" style="margin-bottom:0">
-        <div class="logo-mark"><svg viewBox="0 0 24 24" style="stroke:var(--teal-bright)"><path d="M1 12s4.5-7.5 11-7.5S23 12 23 12s-4.5 7.5-11 7.5S1 12 1 12z"/><circle cx="12" cy="12" r="3.2"/></svg></div>
-        <div class="logo-text"><strong>Advanced Eyecare</strong><span>Ghana</span></div>
+        <div class="logo-mark"><svg viewBox="0 0 24 24" style="stroke:var(--teal-bright)"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3.4"/></svg></div>
+        <div class="logo-text"><strong data-cfg="businessName">ClearVue</strong><span data-cfg="tagline">Optical &amp; Eye Care</span></div>
       </div>
-      <p>Eye exams, prescription eyewear, and complete eye care — trusted across Accra since 2000.</p>
+      <p>Comprehensive eye exams, prescription eyewear, and complete vision care — trusted by thousands across Accra.</p>
       <div class="footer-social">
-        <a href="https://www.instagram.com/advancedeyecareghana/" target="_blank" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
-        <a href="https://wa.me/233207242720" target="_blank" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></a>
+        <a data-cfg-href="instagramUrl" href="#" target="_blank" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        <a data-cfg-href="whatsappUrl" href="#" target="_blank" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></a>
       </div>
     </div>
     <div class="footer-col">
       <h4>Services</h4>
       <ul>
         <li><a href="#services">Eye Exams</a></li>
-        <li><a href="#services">Prescription Glasses</a></li>
+        <li><a href="#services">Eyeglasses</a></li>
         <li><a href="#services">Contact Lenses</a></li>
-        <li><a href="#services">Glaucoma &amp; Cataract Care</a></li>
+        <li><a href="#services">Glaucoma Testing</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h4>Clinic</h4>
       <ul>
         <li><a href="#about">Why Us</a></li>
-        <li><a href="#results">Our Care</a></li>
+        <li><a href="#results">Results</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><a href="https://wa.me/233207242720" target="_blank">Book Appointment</a></li>
+        <li><a data-cfg-href="whatsappUrl" href="#" target="_blank">Book Appointment</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h4>Contact</h4>
       <ul>
-        <li>Eduardo Mohdlana Rd</li>
-        <li>Ablekuma, Accra, Ghana</li>
-        <li>020 724 2720</li>
+        <li data-cfg="address">56 Orphan Crescent, Osu</li>
+        <li>Accra, Ghana</li>
+        <li data-cfg="phoneDisplay">055 571 6192</li>
+        <li>GPS: <span data-cfg="gps">GL-027-7195</span></li>
       </ul>
     </div>
   </div>
   <div class="bottom-bar">
-    <span>&copy; 2026 Advanced Eyecare Ghana. All rights reserved.</span>
-    <span>Ablekuma, Accra, Ghana</span>
+    <span>&copy; 2026 <span data-cfg="businessName4">ClearVue Optical &amp; Eye Care</span>. All rights reserved.</span>
+    <span data-cfg="location">Osu, Accra, Ghana</span>
   </div>
 </footer>
 
+<!-- ================================================================
+     RESELL CONFIG — change ONLY this block to rebrand the whole site
+     for a new client. Every field below auto-fills into the page.
+     ================================================================ -->
 <script>
+const CONFIG = {
+  pageTitle:        "Infinity Eye Centre — Comprehensive Eye Care, Ashongman Accra",
+  businessName:     "Infinity",
+  tagline:          "Eye Centre",
+  businessName3:    "Infinity",
+  businessName4:    "Infinity Eye Centre",
+
+  location:         "Ashongman, Accra",
+  locationShort:    "Ashongman, Accra",
+
+  address:          "New Ashongman, Atomic Hills Estate St, Accra",
+  fullAddress:      "New Ashongman, Atomic Hills Estate St, Accra", // no GhanaPost GPS code found — add if you have it
+  gps:              "", // same as above — leave blank or fill in
+
+  phoneRaw:         "0540801115",
+  phoneDisplay:     "054 080 1115",
+  whatsappNumber:   "233540801115", // assuming this main number is also the WhatsApp — confirm with clinic
+
+  instagramHandle:  "@infinityeyecentre", // guessed from the Facebook mention — couldn't confirm an actual Instagram handle, verify this
+  instagramUrl:      "https://www.instagram.com/infinityeyecentre/", // same caveat
+
+
+
+  // Paste your own Google Maps embed src here (Maps > Share > Embed a map)
+  mapEmbedUrl:      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.8!2d-0.1710!3d5.5670!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNcKwMzQnMDEuMiJOIDDCsDEwJzE1LjYiVw!5e0!3m2!1sen!2sgh!4v1"
+};
+
+CONFIG.telUrl = "tel:" + CONFIG.phoneRaw;
+CONFIG.whatsappUrl = "https://wa.me/" + CONFIG.whatsappNumber;
+
+document.title = CONFIG.pageTitle;
+document.querySelectorAll("[data-cfg]").forEach(el=>{
+  const key = el.getAttribute("data-cfg");
+  if(CONFIG[key] !== undefined) el.textContent = CONFIG[key];
+});
+document.querySelectorAll("[data-cfg-href]").forEach(el=>{
+  const key = el.getAttribute("data-cfg-href");
+  if(CONFIG[key] !== undefined) el.setAttribute("href", CONFIG[key]);
+});
+document.querySelectorAll("[data-cfg-src]").forEach(el=>{
+  const key = el.getAttribute("data-cfg-src");
+  if(CONFIG[key] !== undefined) el.setAttribute("src", CONFIG[key]);
+});
+
 window.addEventListener('scroll',()=>{
   document.getElementById('siteHeader').classList.toggle('scrolled', window.scrollY>60);
 });
