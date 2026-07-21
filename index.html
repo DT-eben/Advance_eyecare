@@ -659,31 +659,33 @@ footer{background:var(--ink);color:rgba(244,247,248,0.6);padding-top:70px}
      for a new client. Every field below auto-fills into the page.
      ================================================================ -->
 <script>
-const CONFIG_LAKEVIEW = {
+const CONFIG = {
   pageTitle:        "Lake View Eye Clinic Ltd. — Eye Care Center, Accra",
   businessName:     "Lake View",
   tagline:          "Eye Clinic",
   businessName3:    "Lake View",
   businessName4:    "Lake View Eye Clinic Ltd.",
- 
+
   location:         "Bukom Arena area, Accra",
   locationShort:    "Accra",
- 
+
   address:          "Near Bukom Arena, Friendly Mall, Accra",
   fullAddress:      "Near Bukom Arena, Friendly Mall, Accra", // no GhanaPost GPS code found — add if you have it
-  gps:              "",
- 
+  gps:              "", // same as above — leave blank or fill in
+
   phoneRaw:         "0540514441",
   phoneDisplay:     "054 051 4441",
-  whatsappNumber:   "233540514441", // CONFIRM — assumed same as main line
- 
-  instagramHandle:  "", // no Instagram found — CONFIRM if one exists
+  whatsappNumber:   "233540514441", // no WhatsApp number was listed — assuming same as main line, confirm with clinic
+
+  instagramHandle:  "", // no Instagram found for this clinic — confirm if one exists
   instagramUrl:      "",
- 
-  mapEmbedUrl:      "" // paste your own Google Maps embed src here (Maps > Share > Embed a map)
+
+  // Paste your own Google Maps embed src here (Maps > Share > Embed a map)
+  mapEmbedUrl:      ""
 };
-CONFIG_LAKEVIEW.telUrl = "tel:" + CONFIG_LAKEVIEW.phoneRaw;
-CONFIG_LAKEVIEW.whatsappUrl = "https://wa.me/" + CONFIG_LAKEVIEW.whatsappNumber;
+
+CONFIG.telUrl = "tel:" + CONFIG.phoneRaw;
+CONFIG.whatsappUrl = "https://wa.me/" + CONFIG.whatsappNumber;
  
  
 
